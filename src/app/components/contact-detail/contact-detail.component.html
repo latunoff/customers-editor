@@ -1,0 +1,22 @@
+<div *ngIf="contact">
+  <h2>{{contact.name | uppercase}} Details</h2>
+  <div>
+    <label>name:
+      <input class="form-control" type="text" [(ngModel)]="contact.name" placeholder="name">
+    </label>
+  </div>
+  <div>
+    <label>number:
+      <input class="form-control"  type="text" [(ngModel)]="contact.number" placeholder="number">
+    </label>
+  </div>
+  <div>
+    <label>email:
+      <input class="form-control"  type="text" [(ngModel)]="contact.email" placeholder="email">
+    </label>
+  </div>
+</div>
+<br>
+
+<button class="btn btn-outline-primary" type="button" (click)="goBack()">Back</button> | 
+<button class="btn btn-primary" type="button" (click)="save()">Save</button>

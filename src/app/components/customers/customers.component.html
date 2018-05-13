@@ -1,0 +1,17 @@
+<h2>Customers</h2>
+
+<div>
+  <label>New Customer:
+    <input #contactName>
+  </label>
+  <button class="btn btn-outline-primary" type="button" (click)="add(contactName.value); contactName.value=''">Add</button>
+</div>
+
+<table class="table table-striped table-hover">
+  <tr *ngFor="let contact of customers">
+    <td><a routerLink="/detail/{{contact.id}}"><span class="badge">{{contact.id}}</span> {{contact.name}}</a></td>
+    <td>{{contact.email}}</td>
+    <td>{{contact.number}}</td>
+    <td><button title="delete contact" (click)="delete(contact)"> x </button></td>
+  </tr>
+</table>
